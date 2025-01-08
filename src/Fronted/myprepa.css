@@ -1,0 +1,73 @@
+.myprepa-container {
+    padding: 20px;
+  }
+  
+  .myprepa-tabs {
+    display: flex;
+    margin-bottom: 10px;
+  }
+  
+  .myprepa-tabs button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #f5f5f5;
+    cursor: pointer;
+  }
+  
+  .myprepa-tabs .active-tab {
+    background-color: #6200ea; /* Example active color */
+    color: white;
+  }
+  
+  .myprepa-content {
+    border-top: 1px solid #ccc;
+  }
+  
+  .myprepa-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    padding: 10px 0;
+    font-weight: bold;
+  }
+  
+  .myprepa-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+    align-items: center;
+  }
+  
+  .myprepa-item-thumbnail {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .thumbnail-placeholder {
+    width: 50px;
+    height: 50px;
+    background-color: #000;
+  }
+  
+  .myprepa-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .myprepa-upload-btn {
+    padding: 10px 20px;
+    border-radius: 20px;
+    background-color: #6200ea; /* Example color */
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .myprepa-search-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+  }
+  

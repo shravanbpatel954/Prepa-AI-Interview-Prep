@@ -1,0 +1,183 @@
+/* Styles for the authentication modal overlay */
+.auth-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Prevents scroll bars if video is larger */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+.auth-video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Ensure video doesn't overflow */
+    z-index: -1; /* Send video behind other elements */
+}
+
+.background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the entire area without distortion */
+    /* Additional styles can go here, like filters if needed */
+}
+
+/* Styles for the modal content box */
+.auth-container {
+    background: #ffffff; /* Solid white background */
+    border-radius: 12px; /* Slightly more rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 24px;
+    max-width: 500px; /* Increased width of modal */
+    width: 100%;
+    position: relative;
+    animation: fadeIn 0.3s ease-out;
+}
+
+/* Close button styles */
+.close-button {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    background: #f1f1f1; /* Light grey background */
+    color: #333;
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.close-button:hover {
+    background: #e0e0e0; /* Darker grey on hover */
+}
+
+/* Styles for the authentication form */
+.auth-form {
+    display: flex;
+    flex-direction: column;
+}
+/* AuthPage.css */
+
+/* Forgot Password link style */
+.forgot-password {
+    color: #007BFF; /* Link color */
+    cursor: pointer;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 10px;
+    display: block; /* Ensures it takes full width */
+    transition: color 0.3s ease;
+}
+
+/* Hover effect for the Forgot Password link */
+.forgot-password:hover {
+    color: #0056b3; /* Darker shade of blue */
+    text-decoration: underline;
+}
+
+.auth-form h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+    text-align: center;
+}
+
+.auth-form label {
+    margin: 10px 0 5px;
+    font-size: 14px;
+    color: #666;
+}
+
+.auth-form input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+    width: calc(100% - 24px); /* Full width with padding adjustment */
+}
+
+.auth-form input:focus {
+    border-color: #007bff; /* Blue border on focus */
+}
+
+/* Submit button */
+.submit-button {
+    background: linear-gradient(135deg, #00aaff, #0033cc);
+    color: #fff;
+    padding: 15px;
+    font-size: 18px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    margin-top: 10px;
+    width: 100%; /* Full width for consistency */
+}
+
+.submit-button:hover {
+    background: linear-gradient(135deg, #0077ff, #002a99);
+    transform: scale(1.05); /* Slightly scale up on hover */
+}
+
+/* Switch Auth link */
+.switch-auth {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.switch-auth button {
+    background: none;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+    font-size: 16px;
+    text-decoration: underline;
+}
+
+/* Google button */
+.auth-google {
+    margin-top: 10px;
+}
+
+.google-button {
+    background: linear-gradient(135deg, #00aaff, #0033cc);
+    color: #fff;
+    padding: 15px;
+    font-size: 18px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    margin-top: 10px;
+    width: 100%; /* Full width to match submit button */
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.google-button:hover {
+    background-color: #357AE8;
+}
+
+.google-logo {
+    width: 24px; /* Adjust size as needed */
+    height: auto;
+    margin-right: 10px; /* Space between logo and text */
+}

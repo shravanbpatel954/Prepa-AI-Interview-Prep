@@ -1,0 +1,284 @@
+/* Analytics.css */
+
+/* General styles for the analytics page */
+.analytics-page {
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #f0f2f5;
+    padding: 40px 20px;
+}
+
+/* Container for the analytics */
+.analytics-page .analytics-container {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Left and right sections of analytics */
+.analytics-page .analytics-left,
+.analytics-page .analytics-right {
+    flex: 1;
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Video container styling */
+.analytics-page .video-container {
+    margin-bottom: 25px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Title styles */
+.analytics-page h2 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: #1f2937;
+}
+
+/* Paragraph styles */
+.analytics-page p {
+    margin: 10px 0;
+    color: #6b7280;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* List styles */
+.analytics-page ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.analytics-page li {
+    margin-bottom: 15px;
+    padding: 15px;
+    background-color: #f9fafb;
+    border-radius: 6px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Hover effect for list items */
+.analytics-page li:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Collapsible section styles */
+.analytics-page .collapsible-section {
+    margin-bottom: 20px;
+}
+
+.analytics-page .collapsible {
+    background-color: #0040ff;
+    color: white;
+    border: none;
+    padding: 12px 10px;
+    width: 100%;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect for collapsible buttons */
+.analytics-page .collapsible:hover {
+    background-color: #1e40af;
+}
+
+/* Content styles for expanded sections */
+.analytics-page .content {
+    padding: 12px 10px;
+    border: 1px solid #072b79;
+    border-radius: 6px;
+    margin-top: 10px;
+    background-color: #eef3fc;
+    transition: max-height 0.3s ease-in-out;
+}
+
+/* Response analysis styling */
+.analytics-page .response-analysis {
+    margin-bottom: 20px;
+    padding: 0.2px;
+    background-color: #799cbf;
+    border-left: 5px solid #0000fd;
+    border-radius: 6px;
+}
+
+/* Response toggle button styles */
+.analytics-page .response-toggle {
+    background-color: transparent;
+    border: none;
+    color: #06080a;
+    cursor: pointer;
+    font-size: 1.3rem;
+}
+
+/* Hover effect for response toggle buttons */
+.analytics-page .response-toggle:hover {
+    color: #2c2f37;
+}
+
+/* Disabled button styles */
+.analytics-page button:disabled {
+    background-color: #d1d5db;
+    cursor: not-allowed;
+}
+
+/* Graph container styles */
+.analytics-page .graph-container {
+    margin-top: 30px;
+    padding: 20px;
+    border: 1px solid #2563eb;
+    border-radius: 8px;
+    background-color: #eef3fc;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Graph title styles */
+.analytics-page .graph-title {
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+    font-weight: 500;
+    color: #1f2937;
+}
+
+/* Media query for responsive design */
+@media (max-width: 768px) {
+    .analytics-page .analytics-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .analytics-page .analytics-left,
+    .analytics-page .analytics-right {
+        margin-bottom: 20px;
+    }
+}
+
+/* Speech analysis specific styles */
+.speech-analysis-section {
+    margin-bottom: 30px;
+}
+
+.speech-analysis-toggle {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.speech-analysis-content {
+    background-color: #e9ecef;
+    padding: 5px;
+    border-radius: 6px;
+}
+
+.response-analysis-section {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.response-toggle-section {
+    margin-bottom: 15px;
+}
+
+.response-details {
+    margin-top: 10px;
+}
+
+.filter-word-analysis-section
+.weak-words-analysis-section,
+.repetition-analysis-section {
+    margin-bottom: 10px;
+}
+
+.filter-word-toggle,
+.weak-word-toggle,
+.repetition-toggle {
+    background-color: transparent;
+    color: #3198b2;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.filter-word-toggle:hover,
+.weak-word-toggle:hover,
+.repetition-toggle:hover {
+    color: #0056b3;
+}
+
+/* Hide response button styles */
+.response-toggle.hide {
+    background-color: #dc3545; /* Color for 'Hide Response' button */
+    color: white;
+}
+
+/* Details styles */
+.details {
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+}
+/* Save Button Styles */
+.savebutton {
+    margin: 20px 0; /* Adds space around the button */
+    display: flex; /* Center align the button if needed */
+    justify-content:left ; /* Center horizontally */
+}
+
+.savebutton button {
+    background-color: #007bff; /* Primary color */
+    color: white; /* Text color */
+    border: none; /* Remove default border */
+    padding: 12px 24px; /* Vertical and horizontal padding */
+    font-size: 1rem; /* Font size */
+    font-weight: 500; /* Boldness of the font */
+    border-radius: 6px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transitions */
+}
+
+/* Hover effect */
+.savebutton button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    transform: translateY(-2px); /* Lift effect */
+}
+
+/* Active effect */
+.savebutton button:active {
+    transform: translateY(0); /* Reset lift effect */
+}
+
+/* Disabled button styles */
+.savebutton button:disabled {
+    background-color: #d1d5db; /* Gray background for disabled */
+    color: #a1a1a1; /* Gray text */
+    cursor: not-allowed; /* Not allowed cursor */
+}
+.analytics-page .analytics-right {
+    flex: 1;
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    max-height: 600px; /* Adjust height as needed */
+    overflow-y: auto; /* Enable vertical scrolling */
+}

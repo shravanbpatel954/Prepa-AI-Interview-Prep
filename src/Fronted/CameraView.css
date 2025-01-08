@@ -1,0 +1,182 @@
+/* Camera View Overlay */
+.camera-overlay {
+.camera-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(230, 228, 228, 0.5); /* Adjusted opacity */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: rgb(23, 19, 19);
+    z-index: 1000; /* Ensure it sits above other content */
+}
+
+/* Interviewer Image */
+.interviewer-image {
+    position: absolute;
+    top: 20px; /* Adjusted to prevent overlap with buttons */
+    left: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.interviewer-image img {
+    width: 50px; /* Adjust as needed */
+    height: auto;
+    margin-right: 10px;
+}
+
+/* Camera View Container */
+.camera-view {
+    position: relative;
+    width: 90%;
+    max-width: 800px;
+    height: 690px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 20px rgba(0, 0, 255, 0.5); /* Blue shadow effect */
+    border-radius: 12px; /* Added border radius */
+    overflow: hidden; /* Prevent overflow of child elements */
+}
+
+/* Video Element */
+.video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 255, 0.8); /* Blue shadow */
+    animation: pulse 2s infinite; /* Animation for the pulse effect */
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 10px rgba(0, 0, 255, 0.8);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(0, 0, 255, 1);
+    }
+    100% {
+        box-shadow: 0 0 10px rgba(0, 0, 255, 0.8);
+    }
+}
+
+/* Hint Box */
+.hint-box {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Practice Ended Message */
+.practice-ended-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Error Message */
+.error-message {
+    color: red;
+    font-weight: bold;
+}
+
+/* Question Container */
+.question-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+/* Title */
+h2 {
+    margin: 0;
+    font-size: 24px;
+}
+/* Practice Ended Message */
+.practice-ended-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    padding: 20px; /* Padding for space inside the box */
+    width: 80%; /* Set width to 80% of parent */
+    max-width: 400px; /* Maximum width for large screens */
+    margin: 20px; /* Margin to prevent overlap with other elements */
+    text-align: center; /* Center text alignment */
+}
+
+/* Check Icon Styling */
+.practice-ended-message img {
+    width: auto; /* Adjust size of the check icon */
+    height: 400px; /* Maintain aspect ratio */
+    margin-bottom: 10px; /* Space below the icon */
+    color: #ff0505;
+}
+
+/* Heading Style */
+.practice-ended-message h2 {
+    font-size: 1.5em; /* Larger font size for emphasis */
+    margin: 10px 0; /* Vertical margin for spacing */
+    color: rgb(23, 19, 19); /* Consistent color with overall theme */
+}
+
+/* Button Styling */
+.practice-ended-message button {
+    padding: 10px 20px; /* Padding for button */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners for button */
+    background-color: #007BFF; /* Primary color for the button */
+    color: white; /* Text color */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s; /* Smooth background color transition */
+}
+
+.practice-ended-message button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Button Styles */
+button {
+    background-color: #007bff; /* Blue background */
+    color: white; /* White text */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.2s; /* Added transform for lift effect */
+    margin: 5px; /* Spacing between buttons */
+}
+
+button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.5); /* Blue shadow on hover */
+    transform: translateY(-2px); /* Lift effect on hover */
+}
+
+button:disabled {
+    background-color: #6c757d; /* Grey background when disabled */
+    cursor: not-allowed;
+}
+
+/* Adjusted Layout Buttons (In/Out) */
+.layout-buttons {
+    position: absolute;
+    top: 10px; /* Space them away from edges */
+    right: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly; /* Evenly space buttons */
+    align-items: center; /* Center vertically */
+    gap: 10px; /* Space between buttons */
+    z-index: 1001; /* Higher z-index to sit above other elements */
+}
+}

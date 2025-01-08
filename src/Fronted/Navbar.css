@@ -1,0 +1,199 @@
+/* Basic Styling */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    background-color: #f5f5f5; /* Light background for contrast */
+}
+
+header {
+    background-color: #ffffff; /* White background for the navbar */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow for navbar */
+    position: fixed; /* Fix the header to the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; /* Make sure the header stays on top of other content */
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative; /* To position children absolutely */
+    box-shadow: 5px 4px 6px rgba(0, 0, 0, 0); /* Add shadow border on all screens */
+    
+}
+
+.nav-logo {
+    color: #048cf5; /* Blue color for the logo */
+    text-decoration: dotted;
+    font-size: 24px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    z-index: 20; /* Ensure the logo stays above other elements */
+    position: relative; /* Ensure positioning works */
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    flex-grow: 1; /* Allow menu to grow and take space */
+    justify-content: center; /* Center align menu items */
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Smooth transition */
+}
+
+.nav-menu.active {
+    transform: translateX(0); /* Ensure menu is visible */
+    opacity: 1; /* Show menu */
+}
+
+/* Add border for small screen */
+@media (max-width: 768px) {
+    .nav-menu {
+        border-top: 1px solid #ddd; /* Light grey border */
+    }
+}
+
+.nav-item {
+    margin: 0 15px; /* Space between items */
+}
+
+.nav-link {
+    color: #333; /* Text color */
+    text-decoration: none; /* Remove underline from links */
+    font-size: 16px; /* Font size for links */
+    padding: 8px 16px; /* Padding around the link text */
+    border-radius: 5px; /* Rounded corners for the link background */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effects */
+}
+
+.nav-link:hover {
+    background-color: #f0f0f0; /* Background color on hover */
+    color: #0072ff; /* Text color on hover */
+}
+
+/* Toggle Button */
+.nav-toggle {
+    display: none; /* Hide by default; shown on mobile */
+    flex-direction: column;
+    cursor: pointer;
+    z-index: 20; /* Ensure it stays above other elements */
+}
+
+.nav-toggle .bar {
+    background-color: #0680f9; /* Color of the bars */
+    height: 3px; /* Thickness of the bars */
+    width: 25px; /* Length of the bars */
+    margin: 4px 0; /* Spacing between bars */
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Smooth transition for animations */
+}
+
+/* Toggle Button Animation (when menu is open) */
+.nav-toggle.active .bar:nth-child(1) {
+    transform: rotate(45deg) translateY(7px);
+}
+
+.nav-toggle.active .bar:nth-child(2) {
+    opacity: 0; /* Hide the middle bar */
+}
+
+.nav-toggle.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translateY(-7px);
+}
+.logo-image {
+    height: 28px; /* Adjust height to fit better with the text */
+    width: auto; /* Maintain aspect ratio */
+    margin-right: 5px; /* Space between logo and text */
+    vertical-align: middle; /* Align logo vertically with the text */
+  }
+  
+/* Signup Button */
+.nav-signup {
+    background: linear-gradient(90deg, #00c6ff 0%, #0072ff 100%); /* Gradient background */
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 25px; /* Pill-shaped button */
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s, color 0.3s, transform 0.3s;
+    border: none;
+    display: inline-block;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    text-align: center; /* Center text */
+    position: absolute; /* Absolute positioning */
+    right: 30px; /* Align to the right edge */
+    top: 50%; /* Vertically center */
+    transform: translateY(-50%); /* Center vertically */
+    z-index: 20; /* Ensure it stays above other elements */
+}
+
+/* Sign In Button */
+.nav-signin {
+    background: linear-gradient(90deg, #00c6ff 0%, #0072ff 100%); /* Match gradient with Sign Up button */
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 25px; /* Match the pill shape */
+    font-size: 16px;
+    font-weight: bold;
+    transition: background 0.3s, color 0.3s, transform 0.3s;
+    border: none;
+    display: none; /* Hide on large screens */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    text-align: center; /* Center text */
+    margin-top: 20px; /* Space between the signup and signin buttons */
+    width: calc(100% - 40px); /* Full width in the menu */
+    text-align: center; /* Center text */
+}
+
+/* Responsive Styling */
+@media (max-width: 768px) {
+    .nav-menu {
+        position: fixed; /* Fixed positioning to overlay content */
+        top: 0;
+        right: 0; /* Align menu to the right edge */
+        width: 100%; /* Full width */
+        height: 100%; /* Full viewport height */
+        background-color: #ffffff; /* White background for the menu */
+        transform: translateX(100%); /* Initially hidden off-screen */
+        opacity: 0; /* Hide menu initially */
+        transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out; /* Smooth transition */
+        z-index: 10; /* Ensure menu is above other content */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; /* Center align menu items */
+        border-bottom: 2px solid #048cf5; /* Stylish border for small screens */
+    }
+
+    .nav-menu.active {
+        transform: translateX(0); /* Slide menu into view */
+        opacity: 1; /* Show menu */
+    }
+
+    .nav-item {
+        margin: 20px 0; /* Space between items in the menu */
+        text-align: center;
+    }
+
+    .nav-toggle {
+        display: flex; /* Show toggle button on mobile */
+    }
+
+    .nav-signup {
+        display: none; /* Hide Signup button on small screens */
+    }
+
+    .nav-signin {
+        display: block; /* Show Sign In button on small screens */
+        width: calc(150% - 10px); /* Adjust width with padding */
+        text-align: center; /* Center text */
+    }
+}

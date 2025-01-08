@@ -1,0 +1,377 @@
+/* General Styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: 'Arial', sans-serif;
+    background-color: #f1f1f1;
+    overflow: hidden;
+    scroll-behavior: smooth;
+}
+
+/* Layout Container */
+.layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background: linear-gradient(135deg, #005aab, #00aaff);
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 4px 0 12px rgba(0, 0, 0, 0.2);
+    transition: width 0.3s ease, padding 0.3s ease;
+}
+
+.layout.collapsed .sidebar {
+    width: 80px;
+    padding: 10px;
+}
+
+/* Sidebar Toggle Button */
+.sidebar-toggle {
+    background: #0078d4;
+    color: #fff;
+    border: none;
+    padding: 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 20px;
+    text-align: center;
+    position: absolute;
+    top: 20px;
+    right: 10px;
+    z-index: 2;
+    transition: background 0.3s ease;
+}
+
+.sidebar-toggle:hover {
+    background: #005aab;
+}
+
+/* Container for interview content */
+.interview-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: calc(120% - 250px); /* Adjust width based on the sidebar width */
+    padding: 20px;
+    box-sizing: border-box;
+    transition: width 0.3s ease;
+}
+
+.layout.collapsed .interview-container {
+    width: calc(100% - 80px); /* Adjust width based on the collapsed sidebar width */
+}
+
+/* Title and Subtitle */
+.title-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Align content to the right */
+    width: 100%; /* Adjust width based on the sidebar width */
+    padding: 0px; /* Adjust padding for spacing */
+}
+
+.title {
+    font-size: 1.5rem; /* Reduced font size */
+    color: #4e4eb1;
+    text-align: left; /* Shift text to the right side */
+    margin: 0; /* Remove margin */
+    animation: fadeInDown 1s ease;
+}
+
+.subtitle {
+    color: #7168c0;
+    text-align: left; /* Shift text to the right side */
+    margin: 0; /* Remove margin */
+    font-size: 1rem; /* Reduced font size */
+    animation: fadeInUp 1s ease;
+}
+
+/* Main Content */
+.interview-content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: calc(100% - 120px);
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    animation: fadeIn 1s ease;
+}
+
+.personalize-section {
+    width: 60%;
+    padding: 20px;
+    border-right: 1px solid #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.personalize-section h2 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: #4e4eb1;
+}
+
+/* Input Group */
+.input-group {
+    margin-bottom: 20px;
+    width: 100%;
+    position: relative;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1rem;
+    color: #4e4eb1;
+}
+
+.input-group input[type="text"],
+.input-group select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+}
+
+.input-group input[type="text"]:focus,
+.input-group select:focus {
+    border-color: #4e4eb1;
+    outline: none;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    border: 1px solid #e0e0e0;
+    background-color: #fff;
+    z-index: 1000;
+    max-height: 200px;
+    overflow-y: auto;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+}
+
+.dropdown-item {
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-item:hover {
+    background-color: #f0f0ff;
+}
+
+/* Recording Section */
+.video-section {
+    width: 55%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Ensure positioning of overlay and controls */
+}
+
+/* Custom Question List and Items */
+.custom-question-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.custom-question-item {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.remove-question-button {
+    background: none;
+    border: none;
+    color: #e74c3c; /* Color for the 'X' button */
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.video-placeholder {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    background-color: #000;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Microphone Box */
+.microphone-box {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.microphone-box img {
+    width: 50px; /* Adjust size of the image */
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.microphone-button {
+    background: none;
+    border: none;
+    color: #4e4eb1; /* Color for the microphone button */
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* Remove Interviewer Text */
+.video-placeholder .video-overlay {
+    display: none; /* Hide interviewer text */
+}
+
+/* Video Controls */
+.video-controls {
+    margin-top: 20px;
+}
+
+.control-button {
+    background-color: #4e4eb1;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px; /* Curvy button */
+    cursor: pointer;
+    font-size: 1rem;
+    margin: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.control-button:hover {
+    background-color: #7168c0;
+}
+
+.recording-timer {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    color: #4e4eb1;
+}
+
+/* Custom Question Box */
+.custom-question-box {
+    border: 1px solid #e0e0e0; /* Change border style */
+    border-radius: 10px; /* Adjust border radius */
+    padding: 0px;
+    margin-top: 0px;
+    cursor: pointer;
+    text-align: center;
+    background-color: #ffffff; /* Set a solid background color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.custom-question-box:hover {
+    background-color: #f9f9f9; /* Slightly different hover background */
+    border-color: #7168c0; /* Change border color on hover */
+}
+
+.custom-question-placeholder {
+    color: #4e4eb1; /* Main color for text */
+    font-size: 1.2rem; /* Increase font size for better visibility */
+    font-weight: 500; /* Make text a bit bolder */
+}
+
+/* Additional Styles */
+.question-label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    color: #4e4eb1;
+    margin-bottom: 10px;
+}
+
+.edit-button {
+    background-color: transparent;
+    border: none;
+    color: #7168c0;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.edit-button:hover {
+    color: #4e4eb1;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Camera On/Off button colors */
+.camera-button.camera-on {
+    background-color: #27ae60; /* Green color for camera on */
+}
+
+.camera-button.camera-off {
+    background-color: #e74c3c; /* Red color for camera off */
+}
