@@ -2,6 +2,10 @@
 
 Prepa is an AI-powered web application designed to help users prepare for interviews. It offers interactive features like custom question generation, video recording, and real-time feedback using AI technology. The application is built using React and integrates various cutting-edge technologies to provide a comprehensive interview preparation experience.
 
+### Website
+
+The live version of the website is available at: [Prepa-AI Interview Preparation Web Application](https://prepa-d7e15.web.app/)
+
 ## Features
 
 - **Interactive Interview Practice**: Record responses to custom interview questions.
