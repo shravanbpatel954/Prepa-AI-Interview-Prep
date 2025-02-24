@@ -32,6 +32,7 @@ To run the Prepa web app locally, follow these steps:
 - Node.js (v14 or above)
 - npm (Node Package Manager)
 
+### Update the firebase.js by replacing the firebase config values which will get from firebase.com
 ### Steps
 
 1. Clone the repository:
