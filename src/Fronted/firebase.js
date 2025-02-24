@@ -4,13 +4,13 @@ import { getAuth, GoogleAuthProvider, signInWithPopup, signOut } from 'firebase/
 import { getFirestore } from 'firebase/firestore'; // Import Firestore
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDLI7ihO4D5727QiaHLMfANI3JqBsbNohk",
-  authDomain: "prepa-d7e15.firebaseapp.com",
-  projectId: "prepa-d7e15",
-  storageBucket: "prepa-d7e15.appspot.com",
-  messagingSenderId: "390909925247",
-  appId: "1:390909925247:web:f36a98cfafeaf872e1ac4a",
-  measurementId: "G-S0C80GRKNB"
+  apiKey: "",
+  authDomain: "",
+  projectId: "",            //firebase configuration
+  storageBucket: "",
+  messagingSenderId: "",
+  appId: "",
+  measurementId: ""
 };
 
 // Initialize Firebase
